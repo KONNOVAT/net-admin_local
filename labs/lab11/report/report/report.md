@@ -1,7 +1,7 @@
 ---
 ## Front matter
 title: "Лабораторная работа № 11"
-subtitle: "Настройка NAT. Планирование"
+subtitle: "Настройка NAT. Планирование."
 author: "Коннова Татьяна Алексеевна"
 
 ## Generic otions
