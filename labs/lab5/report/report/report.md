@@ -113,7 +113,7 @@ header-includes:
 
 ![Задания VLAN](image/7.png){#fig:007 width=70%}
 
-Убедимся, что VLAN заданы, выполнив команду `show vlan` :
+Убедимся, что VLAN заданы, выполнив команду `show vlan` : 
 
 ![Команда show vlan](image/8.png){#fig:008 width=70%}
 

@@ -35,9 +35,9 @@ header-includes:
 
   * Коннова Татьяна Алексеевна
   * студентка
-  * Российский университет дружбы народов
+  * Российский университет дружбы народов 
   * [1132221814@pfur.ru](mailto:1132221814@pfur.ru)
-  * <https://KONNOVATA.github.io/ru/>
+  * <https://KONNOVAT.github.io/ru/>
 
 :::
 ::: {.column width="25%"}
