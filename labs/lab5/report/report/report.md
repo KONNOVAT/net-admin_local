@@ -97,55 +97,55 @@ header-includes:
 
 ![Настройка Trunk-порта на msk-donskaya-takonnova-sw-1](image/1.png){#fig:001 width=70%}
 
-![Настройка Trunk-порта на msk-donskaya-takonnova-sw-2](image/2.png){#fig:001 width=70%}
+![Настройка Trunk-порта на msk-donskaya-takonnova-sw-2](image/2.png){#fig:002 width=70%}
 
-![Настройка Trunk-порта на msk-donskaya-takonnova-sw-3](image/3.png){#fig:001 width=70%}
+![Настройка Trunk-порта на msk-donskaya-takonnova-sw-3](image/3.png){#fig:003 width=70%}
 
-![Настройка Trunk-порта на msk-donskaya-takonnova-sw-4](image/4.png){#fig:001 width=70%}
+![Настройка Trunk-порта на msk-donskaya-takonnova-sw-4](image/4.png){#fig:004 width=70%}
 
-![Настройка Trunk-порта на msk-donskaya-takonnova-sw-1](image/5.png){#fig:001 width=70%}
+![Настройка Trunk-порта на msk-donskaya-takonnova-sw-1](image/5.png){#fig:005 width=70%}
 
-![Настройка Trunk-порта на msk-pavlovskaya-takonnova-sw-1](image/6.png){#fig:001 width=70%}
+![Настройка Trunk-порта на msk-pavlovskaya-takonnova-sw-1](image/6.png){#fig:006 width=70%}
 
-Используя приведённую в лабораторной работе последовательность команд по конфигурации VTP, настроем коммутатор msk-donskaya-sw-1 как VTP-сервер и пропишем на нём номера и названия VLAN. Настроем коммутаторы msk-donskaya-sw-2 — msk-donskaya-sw-4, msk-pavlovskaya-sw-1 как VTP-клиенты.
+Используя приведённую в лабораторной работе последовательность команд по конфигурации VTP, настроим коммутатор msk-donskaya-sw-1 как VTP-сервер и пропишем на нём номера и названия VLAN. Настроем коммутаторы msk-donskaya-sw-2 — msk-donskaya-sw-4, msk-pavlovskaya-sw-1 как VTP-клиенты.
 
 Сначала зададим список VLAN:
 
-![Задания VLAN](image/7.png){#fig:001 width=70%}
+![Задания VLAN](image/7.png){#fig:007 width=70%}
 
-Убедимся, что VLAN заданы, выполнив команду `show vlan`:
+Убедимся, что VLAN заданы, выполнив команду `show vlan` :
 
-![Команда show vlan](image/8.png){#fig:001 width=70%}
+![Команда show vlan](image/8.png){#fig:008 width=70%}
 
 Теперь настроем msk-donskaya-takonnova-sw-1 как VTP-сервер:
 
-![Конфигурация VTP msk-donskaya-takonnova-sw-1](image/9.png){#fig:001 width=70%}
+![Конфигурация VTP msk-donskaya-takonnova-sw-1](image/9.png){#fig:009 width=70%}
 
 Благодаря протоколу VTP мы можем задать VLAN только на сервере, тогда на клиентах будут отражаться такие же VLAN.
 
 Настроем msk-donskaya-takonnova-sw-2 как VTP-клиент:
 
-![Конфигурация VTP msk-donskaya-takonnova-sw-2](image/10.png){#fig:001 width=70%}
+![Конфигурация VTP msk-donskaya-takonnova-sw-2](image/10.png){#fig:0010 width=70%}
 
 Настроем msk-donskaya-takonnova-sw-3 как VTP-клиент:
 
-![Конфигурация VTP msk-donskaya-takonnova-sw-3](image/11.png){#fig:001 width=70%}
+![Конфигурация VTP msk-donskaya-takonnova-sw-3](image/11.png){#fig:0011 width=70%}
 
 Настроем msk-donskaya-takonnova-sw-4 как VTP-клиент:
 
-![Конфигурация VTP msk-donskaya-takonnova-sw-4](image/12.png){#fig:001 width=70%}
+![Конфигурация VTP msk-donskaya-takonnova-sw-4](image/12.png){#fig:0012 width=70%}
 
 Посмотрим vtp статус, увидим, что у нас подключено 11 VLAN, и устройство является клиентом:
 
-![vtp status](image/13.png){#fig:001 width=70%}
+![vtp status](image/13.png){#fig:0013 width=70%}
 
 Проверим, что у нас отображаются нужные VLAN:
 
-![Проверка отображения VLAN](image/14.png){#fig:001 width=70%}
+![Проверка отображения VLAN](image/14.png){#fig:0014 width=70%}
 
 Настроем msk-pavlovskaya-takonnova-sw-1 как VTP-клиент:
 
-![Конфигурация VTP msk-pavlovskaya-takonnova-sw-1](image/15.png){#fig:001 width=70%}
+![Конфигурация VTP msk-pavlovskaya-takonnova-sw-1](image/15.png){#fig:0015 width=70%}
 
 Используя приведённую в лабораторной работе последовательность команд по конфигурации диапазонов портов и на интерфейсах
 укажем принадлежность к VLAN.
@@ -156,35 +156,35 @@ header-includes:
 
 | Устройство                       | Порт        | Примечание           | Access VLAN | Trunk VLAN               |
 |----------------------------------|-------------|----------------------|-------------|--------------------------|
-| msk-donskaya-takonnova-gw-1    | f0/1        | UpLink               |             |                          |
+| msk-donskaya-takonnova-gw-1       | f0/1        | UpLink               |             |                          |
 |                                  | f0/0        | msk-donskaya-sw-1    |             | 2, 3, 101, 102, 103, 104 |
-| msk-donskaya-takonnova-sw-1    | f0/24       | msk-donskaya-gw-1    |             | 2, 3, 101, 102, 103, 104 |
+| msk-donskaya-takonnova-sw-1       | f0/24       | msk-donskaya-gw-1    |             | 2, 3, 101, 102, 103, 104 |
 |                                  | g0/1        | msk-donskaya-sw-2    |             | 2, 3                     |
 |                                  | g0/2        | msk-donskaya-sw-4    |             | 2, 101, 102, 103, 104    |
 |                                  | g0/1        | msk-pavlovskaya-sw-1 |             | 2, 101, 104              |
-| msk-donskaya-takonnova-sw-2    | g0/1        | msk-donskaya-sw-1    |             | 2, 3                     |
+| msk-donskaya-takonnova-sw-2       | g0/1        | msk-donskaya-sw-1    |             | 2, 3                     |
 |                                  | g0/2        | msk-donskaya-sw-3    |             | 2, 3                     |
 |                                  | f0/1        | Web-server           | 3           |                          |
 |                                  | f0/2        | File-server          | 3           |                          |
-| msk-donskaya-takonnova-sw-3    | g0/1        | msk-donskaya-sw-2    |             | 2, 3                     |
+| msk-donskaya-takonnova-sw-3       | g0/1        | msk-donskaya-sw-2    |             | 2, 3                     |
 |                                  | f0/1        | Mail-server          | 3           |                          |
 |                                  | f0/2        | Dns-server           | 3           |                          |
-| msk-donskaya-takonnova-sw-4    | g0/1        | msk-donskaya-sw-1    |             | 2, 101, 102, 103, 104    |
+| msk-donskaya-takonnova-sw-4       | g0/1        | msk-donskaya-sw-1    |             | 2, 101, 102, 103, 104    |
 |                                  | f0/1–f0/5   | dk                   | 101         |                          |
 |                                  | f0/6–f0/10  | departments          | 102         |                          |
 |                                  | f0/11–f0/15 | adm                  | 103         |                          |
 |                                  | f0/16–f0/24 | other                | 104         |                          |
-| msk-pavlovskaya-takonnova-sw-1 | f0/24       | msk-donskaya-sw-1    |             | 2, 101, 104              |
+| msk-pavlovskaya-takonnova-sw-1    | f0/24       | msk-donskaya-sw-1    |             | 2, 101, 104              |
 |                                  | f0/1–f0/15  | dk                   | 101         |                          |
 |                                  | f0/20       | other                | 104         |                          | 
 
-![Конфигурация диапазона портов и указание принадлежности к VLAN для  msk-donskaya-takonnova-sw-4](image/16.png){#fig:001 width=70%}
+![Конфигурация диапазона портов и указание принадлежности к VLAN для  msk-donskaya-takonnova-sw-4](image/16.png){#fig:0016 width=70%}
 
-![Конфигурация диапазона портов и указание принадлежности к VLAN для  msk-pavlovskaya-takonnova-sw-1](image/17.png){#fig:001 width=70%}
+![Конфигурация диапазона портов и указание принадлежности к VLAN для  msk-pavlovskaya-takonnova-sw-1](image/17.png){#fig:0017 width=70%}
 
-![Конфигурация диапазона портов и указание принадлежности к VLAN для  msk-donskaya-takonnova-sw-2](image/18.png){#fig:001 width=70%}
+![Конфигурация диапазона портов и указание принадлежности к VLAN для  msk-donskaya-takonnova-sw-2](image/18.png){#fig:0018 width=70%}
 
-![Конфигурация диапазона портов и указание принадлежности к VLAN для  msk-donskaya-takonnova-sw-3](image/19.png){#fig:001 width=70%}
+![Конфигурация диапазона портов и указание принадлежности к VLAN для  msk-donskaya-takonnova-sw-3](image/19.png){#fig:0019 width=70%}
 
 Укажем статические IP-адреса на оконечных устройствах и проверим с помощью команды ping доступность устройств, принадлежащих
 одному VLAN, и недоступность устройств, принадлежащих разным VLAN.
@@ -229,9 +229,9 @@ header-includes:
 
 Задаем IP-адрес шлюзу и самому серверу web:
 
-![Задание IP-адреса шлюзу](image/20.png){#fig:001 width=70%}
+![Задание IP-адреса шлюзу](image/20.png){#fig:0020 width=70%}
 
-![Задание IP-адреса](image/21.png){#fig:001 width=70%}
+![Задание IP-адреса](image/21.png){#fig:0021 width=70%}
 
 По аналогии и с помощью таблицы IP-адресов задаем IP-адреса всем оконечным устройствам.
 
@@ -239,26 +239,22 @@ header-includes:
 
 Выполнив команду `ipconfig` можем посмотреть заданные IP-адреса:
 
-![ipconfig](image/26.png){#fig:001 width=70%}
+![ipconfig](image/22.png){#fig:0022 width=70%}
 
 Выполним команду `ping`. Так как эти устройства находятся в одной сети, то пингование проходит успешно.
 Но если мы попробуем с dk-donskaya-takonnova-1 пропинговать dk-pavlovskaya-takonnova-1, который находиться в другом VLAN, у нас ничего не получится.
 
-![Пингование](image/27.png){#fig:001 width=70%}
+![Пингование](image/23.png){#fig:0023 width=70%}
 
 Используя режим симуляции в Packet Tracer, изучим процесс передвижения пакета ICMP по сети. Изучим содержимое передаваемого пакета и заголовки задействованных протоколов.
 
 Передача пакета между устройствами из одной сети проходит успешно.
 
-![Режим симуляции](image/28.png){#fig:001 width=70%}
+![Режим симуляции](image/24.png){#fig:0024 width=70%}
 
-Можем посмотреть информацию о пакете, его заголовки. Кадр физического уровня Ethernet, где указаны mac-адреса, кадр сетевого уровня IP, где указаны IP-адреса и ICMP кадр.
+При передаче пакетов между устройствами из разных сетей происходит сбой:
 
-![Информация о PDU](image/29.png){#fig:001 width=70%}
-
-При передачи пакетов между устройствами из разных сетей происходит сбой:
-
-![Режим симуляции](image/30.png){#fig:001 width=70%}
+![Режим симуляции](image/25.png){#fig:0025 width=70%}
 
 # Выводы
 
